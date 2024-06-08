@@ -22,7 +22,6 @@ def test_xlsx():
         with zip_file.open(TEST_XLSX) as xlsx_file:
             workbook = load_workbook(xlsx_file)
             sheet = workbook.active
-            print(sheet.cell(row=3, column=2).value)
 
             assert sheet.cell(row=3, column=2).value == 'Mara'
 
